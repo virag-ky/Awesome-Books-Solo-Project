@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Awesome Books</title>
     <link rel="stylesheet" href="/index.css" type="text/css" />
-    <script src="/index.js" defer></script>
+
+    <script src="../modules/index.js" type="module"></script>
   </head>
   <body>
     <header>
       <nav>
-        <h1>Awesome Books</h1>
+        <h1 id="title-h1">Awesome Books</h1>
         <ul class="navItems">
           <li id="list"><a>List</a></li>
           <li id="add-new"><a>Add new</a></li>
@@ -22,7 +23,7 @@
     </header>
 
     <h2 class="header">All Awesome Books</h2>
-    <section class="book-list"></section>
+    <section class="book-list" id="book-list"></section>
 
     <form class="add-new hide">
       <h2>Add a new book</h2>
