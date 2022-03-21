@@ -1,0 +1,258 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3b4e63;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+header > nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cfd2d3;
+  padding: 15px;
+}
+
+header > nav > ul {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8%;
+}
+
+header > nav > ul > li {
+  color: #27384b;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+header > nav > ul > li > a:hover {
+  color: #77a7b9;
+  cursor: pointer;
+}
+
+#date {
+  color: #ececec;
+  margin: 70px 15px 0 0;
+  font-size: 0.9rem;
+}
+
+h1 {
+  color: #27384b;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+h2 {
+  color: #ececec;
+  margin-bottom: 50px;
+}
+
+section {
+  outline: 3px solid #142d4c;
+  width: 95%;
+  margin-bottom: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  font-size: 0.8rem;
+}
+
+.container > h2 {
+  color: #17313b;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+.container:nth-child(even) {
+  background-color: #8291a5;
+}
+
+.container:nth-child(odd) {
+  background-color: #f8f8fa;
+}
+
+.width {
+  word-break: break-all;
+}
+
+.deletebtn {
+  height: 30px;
+  padding: 2px 5px;
+  background-color: #385170;
+  border: none;
+  color: #ececec;
+}
+
+.deletebtn:hover {
+  cursor: pointer;
+  background-color: rgb(190, 188, 188);
+  color: #142d4c;
+  font-weight: 700;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 60%;
+  margin-bottom: 50px;
+}
+
+form > input {
+  width: 100%;
+  padding: 5px;
+  background-color: #ececec;
+  border: none;
+  border-radius: 3px;
+}
+
+form > input:focus {
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 25%;
+  align-self: flex-end;
+  padding: 5px;
+  background-color: #142d4c;
+  color: #ececec;
+  border: none;
+  font-weight: 700;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #b8bbba;
+  color: #142d4c;
+}
+
+section#contact {
+  outline: none;
+  width: 90%;
+}
+
+section#contact > h2 {
+  text-align: center;
+}
+
+section#contact > p {
+  color: #ececec;
+  line-height: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+section#contact > ul {
+  color: #ececec;
+  margin-bottom: 50px;
+  line-height: 1.8rem;
+  margin-left: 50px;
+}
+
+footer {
+  background-color: #cfd2d3;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 15px;
+  color: #27384b;
+  font-size: 0.9rem;
+}
+
+.hide {
+  display: none;
+}
+
+@media (min-width: 1100px) {
+  header > nav {
+    padding: 15px 100px;
+  }
+
+  header > nav > ul > li {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  #date {
+    margin-right: 100px;
+    margin-top: 80px;
+    font-size: 1rem;
+  }
+
+  section {
+    width: 50%;
+  }
+
+  .container > h2 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    width: 50%;
+    padding: 0 100px;
+  }
+
+  form > input {
+    padding: 15px 20px;
+    font-size: 1.2rem;
+  }
+
+  input[type="submit"] {
+    padding: 15px 20px;
+  }
+
+  section#contact {
+    width: 50%;
+  }
+
+  section#contact > p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  section#contact > ul {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    line-height: 2.5rem;
+  }
+
+  footer {
+    font-size: 1rem;
+    padding: 15px 100px;
+  }
+}
