@@ -8,5 +8,42 @@
     <link rel="stylesheet" href="/index.css" type="text/css" />
     <script src="/index.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <h1>Awesome Books</h1>
+        <ul class="navItems">
+          <li id="list"><a>List</a></li>
+          <li id="add-new"><a>Add new</a></li>
+          <li id="contact-section"><a>Contact</a></li>
+        </ul>
+      </nav>
+      <p id="date"></p>
+    </header>
+
+    <h2 class="header">All Awesome Books</h2>
+    <section class="book-list"></section>
+
+    <form class="add-new hide">
+      <h2>Add a new book</h2>
+      <input type="text" id="title" placeholder="Enter book title" />
+      <input type="text" id="author" placeholder="Enter author" />
+      <input type="submit" id="submit" value="Add" />
+    </form>
+    <section id="contact" class="contact-section hide">
+      <h2>Contact Information</h2>
+      <p>
+        If you have any questions or you just want to say "Hello", you can reach
+        out to us!
+      </p>
+      <ul>
+        <li>Our email: example@email.com</li>
+        <li>Our phone number: 00-111-2233</li>
+        <li>Our address: 1030 Code Drive, US</li>
+      </ul>
+    </section>
+    <footer>
+      <p>Copyright - Awesome Books 2022</p>
+    </footer>
+  </body>
 </html>
