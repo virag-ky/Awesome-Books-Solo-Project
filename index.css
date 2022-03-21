@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #385170;
+  background-color: #3b4e63;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@ header > nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #142d4c;
+  background-color: #979ea0;
   padding: 15px;
 }
 
@@ -42,13 +42,13 @@ header > nav > ul {
 }
 
 header > nav > ul > li {
-  color: #a7a4a4;
+  color: #27384b;
   list-style: none;
   font-size: 0.9rem;
 }
 
 header > nav > ul > li > a:hover {
-  color: #9fd3c7;
+  color: #d5dee0;
   cursor: pointer;
 }
 
@@ -59,7 +59,7 @@ header > nav > ul > li > a:hover {
 }
 
 h1 {
-  color: #ececec;
+  color: #27384b;
   font-size: 1.1rem;
   cursor: pointer;
 }
@@ -84,17 +84,17 @@ section {
 }
 
 .container > h2 {
-  color: #142d4c;
+  color: #17313b;
   margin-bottom: 0;
   font-size: 1.5rem;
 }
 
 .container:nth-child(even) {
-  background-color: #9fd3c7;
+  background-color: #8291a5;
 }
 
 .container:nth-child(odd) {
-  background-color: #ececec;
+  background-color: #f8f8fa;
 }
 
 .width {
@@ -111,8 +111,9 @@ section {
 
 .deletebtn:hover {
   cursor: pointer;
-  background-color: gainsboro;
+  background-color: rgb(190, 188, 188);
   color: #142d4c;
+  font-weight: 700;
 }
 
 form {
@@ -176,12 +177,12 @@ section#contact > ul {
 }
 
 footer {
-  background-color: #142d4c;
+  background-color: #979ea0;
   width: 100%;
   position: fixed;
   bottom: 0;
   padding: 15px;
-  color: #a7a4a4;
+  color: #27384b;
   font-size: 0.9rem;
 }
 
