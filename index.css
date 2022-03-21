@@ -30,7 +30,7 @@ header > nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #979ea0;
+  background-color: #cfd2d3;
   padding: 15px;
 }
 
@@ -48,7 +48,7 @@ header > nav > ul > li {
 }
 
 header > nav > ul > li > a:hover {
-  color: #d5dee0;
+  color: #77a7b9;
   cursor: pointer;
 }
 
@@ -86,7 +86,7 @@ section {
 .container > h2 {
   color: #17313b;
   margin-bottom: 0;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .container:nth-child(even) {
@@ -149,7 +149,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   cursor: pointer;
-  background-color: #9fd3c7;
+  background-color: #b8bbba;
   color: #142d4c;
 }
 
@@ -177,7 +177,7 @@ section#contact > ul {
 }
 
 footer {
-  background-color: #979ea0;
+  background-color: #cfd2d3;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -216,6 +216,10 @@ footer {
 
   section {
     width: 50%;
+  }
+
+  .container > h2 {
+    font-size: 1.5rem;
   }
 
   form {
