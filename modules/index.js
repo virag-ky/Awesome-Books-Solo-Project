@@ -1,18 +1,18 @@
-import Book from './book.js';
+import Book from "./book.js";
 
-import navigate from './nav-items.js';
+import navigate from "./nav-items.js";
 
-import { luxon } from './luxon.js';
+import { DateTime } from "../node_modules/luxon/src/luxon.js";
 
-const bookSection = document.querySelector('.book-list');
-const bookTitle = document.querySelector('#title');
-const bookAuthor = document.querySelector('#author');
-const addBtn = document.querySelector('#submit');
+const bookSection = document.querySelector(".book-list");
+const bookTitle = document.querySelector("#title");
+const bookAuthor = document.querySelector("#author");
+const addBtn = document.querySelector("#submit");
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   class Library {
     constructor() {
-      this.library = JSON.parse(localStorage.getItem('book-collection')) || [];
+      this.library = JSON.parse(localStorage.getItem("book-collection")) || [];
     }
 
     addBook(bookTitle, bookAuthor) {
@@ -22,18 +22,18 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     createBook() {
-      bookSection.innerHTML = '';
+      bookSection.innerHTML = "";
       for (let i = 0; i < this.library.length; i += 1) {
-        const bookContainer = document.createElement('div');
-        bookContainer.setAttribute('class', 'container');
-        const bookDescription = document.createElement('h2');
-        bookDescription.setAttribute('class', 'width');
-        const deleteBtn = document.createElement('button');
-        deleteBtn.setAttribute('class', 'deletebtn');
-        deleteBtn.setAttribute('data', i);
+        const bookContainer = document.createElement("div");
+        bookContainer.setAttribute("class", "container");
+        const bookDescription = document.createElement("h2");
+        bookDescription.setAttribute("class", "width");
+        const deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute("class", "deletebtn");
+        deleteBtn.setAttribute("data", i);
 
         bookDescription.textContent = `${this.library[i].title} by ${this.library[i].author}`;
-        deleteBtn.textContent = 'Delete';
+        deleteBtn.textContent = "Delete";
 
         bookContainer.appendChild(bookDescription);
         bookContainer.appendChild(deleteBtn);
@@ -43,11 +43,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     deleteBook() {
-      [...document.querySelectorAll('.deletebtn')].forEach((element) => {
-        const elementIndex = parseInt(element.getAttribute('data'), 10);
-        element.addEventListener('click', () => {
+      [...document.querySelectorAll(".deletebtn")].forEach((element) => {
+        const elementIndex = parseInt(element.getAttribute("data"), 10);
+        element.addEventListener("click", () => {
           this.library.splice(elementIndex, 1);
-          localStorage.setItem('book-collection', JSON.stringify(this.library));
+          localStorage.setItem("book-collection", JSON.stringify(this.library));
           this.createBook();
         });
       });
@@ -58,22 +58,28 @@ window.addEventListener('DOMContentLoaded', () => {
 
   myLibrary.createBook();
 
-  addBtn.addEventListener('click', (e) => {
+  addBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    if (bookTitle.value === '' || bookAuthor.value === '') {
+    if (bookTitle.value === "" || bookAuthor.value === "") {
       return;
     }
     myLibrary.addBook(bookTitle, bookAuthor);
-    localStorage.setItem('book-collection', JSON.stringify(myLibrary.library));
-    bookTitle.value = '';
-    bookAuthor.value = '';
+    localStorage.setItem("book-collection", JSON.stringify(myLibrary.library));
+    bookTitle.value = "";
+    bookAuthor.value = "";
   });
   navigate();
 });
 
 function time() {
-  const siteDate = document.querySelector('#date');
-  siteDate.textContent = luxon.DateTime.local();
+  const siteDate = document.querySelector("#date");
+  siteDate.textContent = DateTime.now().toLocaleString({
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+  });
 }
 
 setInterval(time, 1000);
